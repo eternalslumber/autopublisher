@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://gamingandpotheads.wordpress.com/" />
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/wp-admin/edit.php?post_status=draft&amp;post_type=post</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>5</td>
+	<td>element</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>storedVars['element'] &lt; 25;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{Math.floor(Math.random()*60) + 1}</td>
+	<td>randomminute</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{Math.floor(Math.random()*24) + 1}</td>
+	<td>randomhour</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>2016</td>
+	<td>year</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>11</td>
+	<td>day</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>label=05-May</td>
+	<td>month</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Quick Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=mm</td>
+	<td>${month}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=jj</td>
+	<td>${day}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=aa</td>
+	<td>${year}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=hh</td>
+	<td>${randomhour}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=mn</td>
+	<td>${randomminute}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=_status</td>
+	<td>label=Published</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[${element}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>element++;</td>
+	<td>element</td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
